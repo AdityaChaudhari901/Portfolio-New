@@ -158,7 +158,7 @@ export function Hero() {
                         <a href="#projects">View Projects</a>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                             <Download className="h-4 w-4" />
                             View Resume
                         </a>
