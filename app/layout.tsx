@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,45 +21,61 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aditya.dev"),
-  title: "Aditya | Full-Stack Developer",
+  metadataBase: new URL("https://adityachaudhari.tech"),
+  title: {
+    default: "Aditya Chaudhari | Full-Stack Developer & AI/ML Engineer",
+    template: "%s | Aditya Chaudhari",
+  },
   description:
-    "A passionate full-stack developer crafting beautiful, performant, and user-centric web applications. Explore my portfolio to see my projects, skills, and experience.",
+    "Aditya Chaudhari - Full-Stack Developer and AI/ML Engineer from Pune, India. Expert in React, Next.js, Python, LangChain, and building scalable web applications with AI integration.",
   keywords: [
+    "Aditya Chaudhari",
     "Full-Stack Developer",
+    "AI/ML Engineer",
     "Web Developer",
-    "React",
-    "Next.js",
+    "React Developer",
+    "Next.js Developer",
+    "Python Developer",
+    "LangChain",
+    "RAG",
+    "Agentic AI",
     "TypeScript",
+    "Node.js",
     "Portfolio",
     "Software Engineer",
+    "Pune",
+    "India",
   ],
-  authors: [{ name: "Aditya" }],
-  creator: "Aditya",
+  authors: [{ name: "Aditya Chaudhari", url: "https://adityachaudhari.tech" }],
+  creator: "Aditya Chaudhari",
+  publisher: "Aditya Chaudhari",
+  alternates: {
+    canonical: "https://adityachaudhari.tech",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aditya.dev",
-    siteName: "Aditya's Portfolio",
-    title: "Aditya | Full-Stack Developer",
+    url: "https://adityachaudhari.tech",
+    siteName: "Aditya Chaudhari Portfolio",
+    title: "Aditya Chaudhari | Full-Stack Developer & AI/ML Engineer",
     description:
-      "A passionate full-stack developer crafting beautiful, performant, and user-centric web applications.",
+      "Full-Stack Developer and AI/ML Engineer building scalable web applications and intelligent, LLM-powered solutions.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Aditya - Full-Stack Developer",
+        alt: "Aditya Chaudhari - Full-Stack Developer & AI/ML Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aditya | Full-Stack Developer",
+    title: "Aditya Chaudhari | Full-Stack Developer & AI/ML Engineer",
     description:
-      "A passionate full-stack developer crafting beautiful, performant, and user-centric web applications.",
+      "Full-Stack Developer and AI/ML Engineer building scalable web applications and intelligent, LLM-powered solutions.",
     images: ["/og-image.png"],
-    creator: "@aditya",
+    creator: "@adityamsn11",
   },
   robots: {
     index: true,
@@ -70,6 +87,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "4RJwo547QNVa0zQfq0IXfxNUp0C95PzARa08OVt8kNQ",
   },
   icons: {
     icon: [
@@ -87,6 +107,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <JsonLd />
+      </head>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
