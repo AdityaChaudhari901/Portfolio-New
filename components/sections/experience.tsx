@@ -134,19 +134,7 @@ export function Experience() {
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                             <div className="relative bg-card/95 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/10 group-hover:border-primary/30 transition-all duration-500">
-                                {/* Current badge with enhanced styling */}
-                                {experience.current && (
-                                    <Badge
-                                        variant="accent"
-                                        className="absolute -top-3 left-6 flex items-center gap-1.5 px-3 py-1 shadow-lg shadow-primary/20"
-                                    >
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
-                                        </span>
-                                        Current Position
-                                    </Badge>
-                                )}
+
 
                                 {/* Header section */}
                                 <div className="flex flex-col gap-4 mb-6">

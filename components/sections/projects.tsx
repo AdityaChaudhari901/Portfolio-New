@@ -60,7 +60,7 @@ export function Projects() {
                             {/* Gradient overlay on hover */}
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                            <CardHeader className="relative">
+                            <CardHeader className={`relative ${project.featured ? 'pr-24' : ''}`}>
                                 <CardTitle className="flex items-start justify-between gap-4">
                                     <span className="group-hover:text-primary transition-colors">
                                         {project.title}

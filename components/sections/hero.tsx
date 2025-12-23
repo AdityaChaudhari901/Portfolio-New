@@ -87,10 +87,10 @@ export function Hero() {
     return (
         <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Simple gradient background */}
-            <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-purple-500/5" />
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+                <div className="absolute top-1/4 left-0 md:left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 right-0 md:right-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-500/10 rounded-full blur-3xl" />
             </div>
 
             <div className="section-container text-center relative z-10">
@@ -169,7 +169,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="flex items-center justify-center gap-4"
+                    className="flex items-center justify-center gap-4 mb-20"
                 >
                     <a
                         href={siteConfig.links.github}
@@ -206,7 +206,7 @@ export function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                className="absolute bottom-12 left-1/2 -translate-x-1/2"
             >
                 <a
                     href="#about"
